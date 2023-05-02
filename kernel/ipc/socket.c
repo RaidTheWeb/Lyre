@@ -1,19 +1,19 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <stddef.h>
-#include <ipc/socket.h>
-#include <ipc/socket/tcp.h>
-#include <ipc/socket/udp.h>
-#include <ipc/socket/unix.h>
-#include <lib/alloc.h>
-#include <lib/errno.h>
-#include <lib/panic.h>
-#include <lib/print.h>
-#include <lib/resource.h>
-#include <lib/debug.h>
-#include <sched/sched.h>
-#include <bits/posix/stat.h>
-#include <abi-bits/poll.h>
+#include <ipc/socket.k.h>
+#include <ipc/socket/tcp.k.h>
+#include <ipc/socket/udp.k.h>
+#include <ipc/socket/unix.k.h>
+#include <lib/alloc.k.h>
+#include <lib/errno.k.h>
+#include <lib/panic.k.h>
+#include <lib/print.k.h>
+#include <lib/resource.k.h>
+#include <lib/debug.k.h>
+#include <sched/sched.k.h>
+#include <sys/stat.h>
+#include <poll.h>
 #include <netinet/in.h>
 
 static bool stub_bind(struct socket *this, struct f_description *description, void *addr, socklen_t len) {

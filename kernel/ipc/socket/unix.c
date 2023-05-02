@@ -1,15 +1,15 @@
 #include <stdint.h>
 #include <stddef.h>
-#include <fs/vfs/vfs.h>
-#include <ipc/socket.h>
-#include <ipc/socket/unix.h>
-#include <lib/alloc.h>
-#include <lib/errno.h>
-#include <lib/print.h>
-#include <sched/sched.h>
+#include <fs/vfs/vfs.k.h>
+#include <ipc/socket.k.h>
+#include <ipc/socket/unix.k.h>
+#include <lib/alloc.k.h>
+#include <lib/errno.k.h>
+#include <lib/print.k.h>
+#include <sched/sched.k.h>
 #include <sys/un.h>
-#include <abi-bits/poll.h>
-#include <bits/posix/stat.h>
+#include <poll.h>
+#include <sys/stat.h>
 
 #define SOCK_BUFFER_SIZE 0x4000
 

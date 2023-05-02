@@ -1,13 +1,13 @@
 #include <stdint.h>
 #include <stddef.h>
-#include <lib/alloc.h>
-#include <lib/errno.h>
-#include <lib/hashmap.h>
-#include <lib/print.h>
-#include <lib/debug.h>
-#include <mm/vmm.h>
-#include <sched/proc.h>
-#include <abi-bits/utsname.h>
+#include <lib/alloc.k.h>
+#include <lib/errno.k.h>
+#include <lib/hashmap.k.h>
+#include <lib/print.k.h>
+#include <lib/debug.k.h>
+#include <mm/vmm.k.h>
+#include <sched/proc.k.h>
+#include <sys/utsname.h>
 
 static spinlock_t futex_lock = SPINLOCK_INIT;
 static HASHMAP_TYPE(struct event *) futex_hashmap = HASHMAP_INIT(256);
