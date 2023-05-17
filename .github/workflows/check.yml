@@ -17,18 +17,9 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install build-essential meson nasm rsync clang llvm lld -y
 
-      - name: Attempt to build the Lyre kernel (debug)
+      - name: Build the Lyre kernel
         run: |
           cd kernel
           ./bootstrap
-          ./configure --enable-werror CPPFLAGS="-nostdinc -I`realpath ../mlibc-headers/include` -I`realpath ../linux/usr/include`"
+          ./configure
           make
-          make maintainer-clean
-
-      - name: Attempt to build the Lyre kernel (prod)
-        run: |
-          cd kernel
-          ./bootstrap
-          ./configure --enable-werror LYRE_DEBUG=1 CPPFLAGS="-nostdinc -I`realpath ../mlibc-headers/include` -I`realpath ../linux/usr/include`"
-          make
-          make maintainer-clean

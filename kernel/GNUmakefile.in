@@ -188,7 +188,6 @@ dist:
 	rm -rf "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)"/libgcc-binaries/.git
 	rm -rf "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)"/libgcc-binaries/.gitignore
 	rm -rf "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)"/flanterm/.git
-
 	libgcc_needed="x86_64-no-red-zone"; \
 	for f in $$libgcc_needed; do \
 		mv "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)/libgcc-binaries/libgcc-$$f.a" "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)/libgcc-binaries/libgcc-$$f.a.save"; \
@@ -197,7 +196,6 @@ dist:
 	for f in $$libgcc_needed; do \
 		mv "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)/libgcc-binaries/libgcc-$$f.a.save" "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)/libgcc-binaries/libgcc-$$f.a"; \
 	done
-
 	echo "$(PACKAGE_VERSION)" >"$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)"/version
 	tar -Jcf "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)".tar.xz "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)"
 	tar -zcf "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)".tar.gz "$(PACKAGE_TARNAME)-$(PACKAGE_VERSION)"
