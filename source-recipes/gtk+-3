@@ -1,7 +1,7 @@
 name=gtk+-3
-version=3.24.36
+version=3.24.37
 tarball_url="https://download.gnome.org/sources/gtk%2B/3.24/gtk%2B-${version}.tar.xz"
-tarball_blake2b="3d9346a3fbc78420eb8edcbad42d9885bed69ce46505bc15819691d884f31aa72386fcd38837e042ba9be3cda6cf5203f921c7f6054a7350c46dee6b77fc4cc4"
+tarball_blake2b="1cffcf0066f0f9d42fd01d9cf0dbab2465bf749fe70ebe24a843807c77b696047cbb739fead7f7872833ee562439d96857d02b3037b949babaa3797482104fda"
 
 regenerate() {
     true
