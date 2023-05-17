@@ -10,9 +10,9 @@ configure() {
 }
 
 build() {
-    make CC=x86_64-lyre-gcc CFLAGS=-fPIC -f Makefile-libbz2_so
+    make CC=x86_64-lyre-gcc CFLAGS="$CFLAGS -fPIC" -f Makefile-libbz2_so
     make clean
-    make CC=x86_64-lyre-gcc AR=x86_64-lyre-ar CFLAGS=-fPIC -j${parallelism}
+    make CC=x86_64-lyre-gcc AR=x86_64-lyre-ar CFLAGS="$CFLAGS -fPIC" -j${parallelism}
 }
 
 install() {
