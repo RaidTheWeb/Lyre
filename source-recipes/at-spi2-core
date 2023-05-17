@@ -1,7 +1,7 @@
 name=at-spi2-core
-version=2.47.1
-tarball_url="https://download.gnome.org/sources/at-spi2-core/2.47/at-spi2-core-${version}.tar.xz"
-tarball_blake2b="d950549a6e2a2a946f7b7536fc220941f077816d1869be2f8a1ba1445a263a7d9dd2d4d337e71f82965d828296ab97f0adaf8db51bacf1db8e03e3e7c702ec16"
+version=2.48.2
+tarball_url="https://download.gnome.org/sources/at-spi2-core/2.48/at-spi2-core-${version}.tar.xz"
+tarball_blake2b="3e499c155a6d8780cb08a714521b530353f8e8a507c42acfbab89ea637413f17f5ecb431574eb862ac47d465f80320f04dedeced0547c0f057b426ea763f6c81"
 
 regenerate() {
     true
