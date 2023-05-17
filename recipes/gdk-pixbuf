@@ -3,7 +3,7 @@ from_source=gdk-pixbuf
 revision=1
 imagedeps="meson ninja"
 hostdeps="gcc pkg-config"
-deps="core-libs glib libjpeg-turbo libpng libx11"
+deps="core-libs glib libjpeg-turbo libpng libx11 libtiff"
 
 configure() {
     meson setup \
@@ -24,6 +24,6 @@ install() {
     DESTDIR="${dest_dir}" ninja install
 
     x86_64-lyre-strip "${dest_dir}${prefix}"/lib/gdk-pixbuf-2.0/2.10.0/loaders/*
-    x86_64-lyre-strip "${dest_dir}${prefix}"/lib/libgdk_pixbuf-2.0.so.0.4200.9
+    x86_64-lyre-strip "${dest_dir}${prefix}"/lib/libgdk_pixbuf-2.0.so.0.4200.10
     x86_64-lyre-strip "${dest_dir}${prefix}"/bin/*
 }
