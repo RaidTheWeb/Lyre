@@ -1,7 +1,7 @@
 name=linux
-version=6.2.9
+version=6.3.3
 tarball_url="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${version}.tar.xz"
-tarball_blake2b="0e7ad5502767cb74fa0fea79884ce753be0421a56bbbe0a6cb66add5839b3329298671725595c0624886d9d2836c4e9d4bd152acefb2b3df1cf7a1013e0178ba"
+tarball_blake2b="b1557f391ff50df4e2d722c223b88f54d603b9d03e8fd2d3216c0b96bccbceb1e3ddbb55967df894f38a896e189ed4a149bc371b10fd808862e99cc199e6a3c8"
 
 regenerate() {
     true

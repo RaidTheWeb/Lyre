@@ -18,7 +18,7 @@ if ! [ -d printf ]; then
     curl -Lo printf/printf.h https://github.com/eyalroz/printf/raw/master/src/printf/printf.h
 fi
 
-LINUX_VERSION=6.2.9
+LINUX_VERSION=6.3.3
 
 if ! [ -d linux-headers ]; then
     curl -Lo linux.tar.xz https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${LINUX_VERSION}.tar.xz

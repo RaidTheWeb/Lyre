@@ -40,7 +40,7 @@ index 1b0111f..bf2d882 100644
    i[3-7]86-*-lynxos*)
      targ_defvec=i386_elf32_vec
 diff --git binutils-clean/gas/configure.tgt binutils-workdir/gas/configure.tgt
-index 765ba73..16ca01f 100644
+index 765ba73..f3f0515 100644
 --- binutils-clean/gas/configure.tgt
 +++ binutils-workdir/gas/configure.tgt
 @@ -226,6 +226,7 @@ case ${generic_target} in
