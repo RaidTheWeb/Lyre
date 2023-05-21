@@ -2,7 +2,7 @@
 
 Lyre is an effort to write a modern, fast, and useful operating system.
 
-<h1>Lyre is still pre-alpha software not meant for daily or production usage!</h1>
+<h3>*** Lyre is still pre-alpha software not meant for daily or production usage! ***</h3>
 
 Join the [Discord chat](https://discord.gg/2kdk3CbADg).
 
