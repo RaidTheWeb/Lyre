@@ -1,8 +1,8 @@
 diff --git mlibc-clean/abis/linux/in.h mlibc-workdir/abis/linux/in.h
-index bb5b6ef..8d66fe8 100644
+index 1b07434..6b4d193 100644
 --- mlibc-clean/abis/linux/in.h
 +++ mlibc-workdir/abis/linux/in.h
-@@ -86,6 +86,10 @@ struct group_req {
+@@ -100,6 +100,10 @@ struct group_source_req {
  #define INET_ADDRSTRLEN  16
  #define INET6_ADDRSTRLEN 46
  
@@ -30,19 +30,3 @@ index 3474615..e034881 100644
  }
  
  char **backtrace_symbols(void *const *, int) {
-diff --git mlibc-clean/sysdeps/lyre/generic/generic.cpp mlibc-workdir/sysdeps/lyre/generic/generic.cpp
-index fced008..7ba9337 100644
---- mlibc-clean/sysdeps/lyre/generic/generic.cpp
-+++ mlibc-workdir/sysdeps/lyre/generic/generic.cpp
-@@ -684,7 +684,10 @@ int sys_listen(int fd, int backlog) {
- 	return 0;
- }
- 
--int sys_inotify_create(int, int *) STUB_ONLY
-+int sys_inotify_create(int, int *) {
-+	mlibc::infoLogger() << "mlibc: sys_inotify_create() is unimplemented" << frg::endlog;
-+	return ENOSYS;
-+}
- 
- int sys_fork(pid_t *child) {
- 	__syscall_ret ret = __syscall(SYS_fork);
