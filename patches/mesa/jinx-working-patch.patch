@@ -1,13 +1,10 @@
 diff --git mesa-clean/include/drm-uapi/drm.h mesa-workdir/include/drm-uapi/drm.h
-index 5e54c3a..3fd8f34 100644
+index 5e54c3a..c09eec9 100644
 --- mesa-clean/include/drm-uapi/drm.h
 +++ mesa-workdir/include/drm-uapi/drm.h
-@@ -35,10 +35,11 @@
- #ifndef _DRM_H_
- #define _DRM_H_
+@@ -37,14 +37,15 @@
  
--#if   defined(__linux__)
-+#if   defined(__linux__) || defined(__lyre__)
+ #if   defined(__linux__)
  
 +#include <sys/ioctl.h>
  #include <linux/types.h>
@@ -16,6 +13,13 @@ index 5e54c3a..3fd8f34 100644
  typedef unsigned int drm_handle_t;
  
  #else /* One of the BSDs */
+ 
+ #include <stdint.h>
+-#include <sys/ioccom.h>
++//#include <sys/ioccom.h>
+ #include <sys/types.h>
+ typedef int8_t   __s8;
+ typedef uint8_t  __u8;
 diff --git mesa-clean/meson.build mesa-workdir/meson.build
 index 07c77e1..ec3aa28 100644
 --- mesa-clean/meson.build

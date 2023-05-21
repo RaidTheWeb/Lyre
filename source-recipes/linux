@@ -1,8 +1,0 @@
-name=linux
-version=6.3.3
-tarball_url="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${version}.tar.xz"
-tarball_blake2b="b1557f391ff50df4e2d722c223b88f54d603b9d03e8fd2d3216c0b96bccbceb1e3ddbb55967df894f38a896e189ed4a149bc371b10fd808862e99cc199e6a3c8"
-
-regenerate() {
-    true
-}
